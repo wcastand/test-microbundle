@@ -1,0 +1,17 @@
+{
+  "name": "test-microbundle",
+  "version": "0.0.1",
+  "main": "src/index.js",
+  "author": "wcastand <wcastand@gmail.com> (https://github.com/wcastand)",
+  "license": "MIT",
+  "scripts": {
+    "build": "microbundle --jsx",
+    "dev": "microbundle --jsx watch"
+  },
+  "devDependencies": {
+    "microbundle": "0.2.3"
+  },
+  "dependencies": {
+    "react": "16.2.0"
+  }
+}
