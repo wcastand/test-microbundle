@@ -1,15 +1,20 @@
 {
-  "name": "test-microbundle",
+  "name": "my-lib",
   "version": "0.0.1",
-  "main": "src/index.js",
+  "main": "build/my-lib.js",
+  "module": "build/my-lib.m.js",
+  "source": "src/index.js",
   "author": "wcastand <wcastand@gmail.com> (https://github.com/wcastand)",
   "license": "MIT",
   "scripts": {
-    "build": "microbundle --jsx",
-    "dev": "microbundle --jsx watch"
+    "clean": "rm -rf build",
+    "prebuild": "yarn clean",
+    "predev": "yarn clean",
+    "build": "microbundle -i index.js -o build --name MyLib",
+    "dev": "microbundle watch -i index.js -o build --name MyLib"
   },
   "devDependencies": {
-    "microbundle": "0.2.3"
+    "microbundle": "developit/microbundle#master"
   },
   "dependencies": {
     "react": "16.2.0"
